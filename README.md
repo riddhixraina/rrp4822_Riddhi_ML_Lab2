@@ -37,7 +37,7 @@ The model form is:
 $$ \hat{y}_{i+d} = \sum_{m=0}^d \sum_{j=1}^{p} X_{i+m,j}\beta_{j,m} $$
 
 * **Implementation:** A `create_dly_data` function was built to transform the raw time-series data into this new format.
-* **Result (with fixed `d=6`):** This model showed a **significant improvement**, with the MSE dropping to approximately **18.8**. This confirmed that incorporating past neural activity is crucial for accurate predictions.
+* **Result (with fixed `d=6`):** This model showed a **significant improvement**, with the MSE dropping to approximately **17.8**. This confirmed that incorporating past neural activity is crucial for accurate predictions.
 
 ### 3. Optimal Delay Selection
 
@@ -47,7 +47,7 @@ While `d=6` was better, it was an arbitrary choice. The final step was to find t
 * **Result:** The optimal delay was found by identifying the `d` value that resulted in the lowest MSE on the test set. The plot below shows how the model's error decreases as more delays are added, eventually plateauing.
 
 
-The optimal delay was found to be **d=29**, which achieved a minimum MSE of approximately **19.9**.
+The optimal delay was found to be **d=30**, which achieved a minimum MSE of approximately **16.4**.
 
 ## How to Run
 
