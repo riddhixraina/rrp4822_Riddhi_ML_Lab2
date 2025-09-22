@@ -46,9 +46,8 @@ While `d=6` was better, it was an arbitrary choice. The final step was to find t
 * **Implementation:** To do this efficiently, a single "master" dataset was created with the maximum delay (`dmax=30`). A loop then tested each delay value by training a model on a progressively wider **slice** of the feature matrix. This avoids recreating the dataset in every iteration, saving significant computation time.
 * **Result:** The optimal delay was found by identifying the `d` value that resulted in the lowest MSE on the test set. The plot below shows how the model's error decreases as more delays are added, eventually plateauing.
 
-![Plot of MSE vs. Delay](https://i.imgur.com/gHhC8fJ.png)
 
-The optimal delay was found to be **d=15**, which achieved a minimum MSE of approximately **17.2**.
+The optimal delay was found to be **d=29**, which achieved a minimum MSE of approximately **19.9**.
 
 ## How to Run
 
@@ -56,7 +55,6 @@ The optimal delay was found to be **d=15**, which achieved a minimum MSE of appr
     * `numpy`
     * `matplotlib`
     * `scikit-learn`
-    * `six`
 
 2.  **Data:** The script will automatically download the required data file, `example_data_s1.pickle`, if it's not already present.
 
